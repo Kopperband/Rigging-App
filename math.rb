@@ -21,6 +21,14 @@ def VolRect()
     puts "Your calculated weight is #{volume}lbs"
 end
 
+#Volume of a Hollow Cylinder
+def VolPipe()
+  width = $PI * $DIAMETER
+  volume = $LENGTH * width * $THICKNESS * $WEIGHT
+  puts "Your calculated weight is #{volume}lbs"
+end
+
+# the method in which the program should get all input for the lifting object
 def constants()
   puts "Please choose your material:\n1.Aluminum \n2.Brass n\3.Concrete \n4.Copper n\5.Diesel \n6.Oil,Motor \n7.Sand and Gravel \n8.Steel \n9.Water \n10.Wood"
   material = gets.chomp.to_i
@@ -60,8 +68,11 @@ def constants()
   $HEIGHT = gets.chomp.to_f
   puts " "
   puts "Please enter the Diamter of the object or enter 0 if not required"
-  puts "Diameter"
+  puts "Diameter:"
   $DIAMETER = gets.chomp.to_f
+  puts "Please enter the Thickness of the object of a hollow pipe or 0 if not required"
+  puts "Thickness: "
+  $THICKNESS = gets.chomp.to_f
 end
 
 # Welcome Page
