@@ -15,44 +15,53 @@ def LoadAngleMeasurement()
 end
 #Volume of a Rectangle
 def VolRect()
-  puts "Please enter a length, width and height of object in feet"
-  puts "length: "
-  length = gets.chomp.to_f
-  puts "width: "
-  width = gets.chomp.to_f
-  puts "height: "
-  height = gets.chomp.to_f
-    puts "Please choose your material:\n1.Aluminum \n2.Brass n\3.Concrete \n4.Copper n\5.Diesel \n6.Oil,Motor \n7.Sand and Gravel \n8.Steel \n9.Water \n10.Wood"
-    material = gets.chomp.to_i
-
-    #Weights (all in lbs a cubic foot)
-    case material
-      when 1 # Aluminum
-        weight = 165
-      when 2 # Brass
-        weight = 524
-      when 3 # Concrete
-        weight = 150
-      when 4 # Copper
-        weight = 560
-      when 5 # Diesel
-        weight = 52
-      when 6 # Oil, Motor
-        weight = 58
-      when 7 # Sand and Gravel
-        weight = 120
-      when 8 # Steel
-        weight = 490
-      when 9 # Water
-        weight = 63
-      when 10 # Wood
-        weight = 50
-      else
-        puts "Error please enter a valid number"
-    end
+    constants()
     # Calculates total asquare footage and then multiplies it by the weight of chosen material
-    volume = length * width * height * weight
-    puts "Your calculated weight is #{volume}"
+    volume = $LENGTH*$WIDTH*$HEIGHT*$WEIGHT
+    puts "Your calculated weight is #{volume}lbs"
+end
+
+def constants()
+  puts "Please choose your material:\n1.Aluminum \n2.Brass n\3.Concrete \n4.Copper n\5.Diesel \n6.Oil,Motor \n7.Sand and Gravel \n8.Steel \n9.Water \n10.Wood"
+  material = gets.chomp.to_i
+
+  #Weights (all in lbs a cubic foot)
+  case material
+    when 1 # Aluminum
+      $WEIGHT = 165
+    when 2 # Brass
+      $WEIGHT = 524
+    when 3 # Concrete
+      $WEIGHT = 150
+    when 4 # Copper
+      $WEIGHT = 560
+    when 5 # Diesel
+      $WEIGHT = 52
+    when 6 # Oil, Motor
+      $WEIGHT = 58
+    when 7 # Sand and Gravel
+      $WEIGHT = 120
+    when 8 # Steel
+      $WEIGHT = 490
+    when 9 # Water
+      $WEIGHT = 63
+    when 10 # Wood
+      $WEIGHT = 50
+    else
+      puts "Error please enter a valid number"
+  end
+
+  puts "Please Enter Length, Width and Height of Object."
+  puts "Length: "
+  $LENGTH = gets.chomp.to_f
+  puts "Width: "
+  $WIDTH = gets.chomp.to_f
+  puts "Height: "
+  $HEIGHT = gets.chomp.to_f
+  puts " "
+  puts "Please enter the Diamter of the object or enter 0 if not required"
+  puts "Diameter"
+  $DIAMETER = gets.chomp.to_f
 end
 
 # Welcome Page
