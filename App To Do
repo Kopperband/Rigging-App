@@ -1,0 +1,15 @@
+Things To add and tweak:\
+definitions:
+ radius
+circumference
+diameter
+
+
+need to add the rest of the math calculations which include:
+- inches to feet:
+  foot decimal = X / 12
+-volume of a hollow cylinder:
+    length * (width = circ = 3.14 * diameter) * height * unit weight
+-solid rod:
+  ((3.14 * (diameter * diameter)) / 4) * length * unit weight
+- complex shapes which should just be a multitude of different simple volume calculations
