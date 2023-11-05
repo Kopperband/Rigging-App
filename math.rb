@@ -28,6 +28,22 @@ def VolPipe()
   puts "Your calculated weight is #{volume}lbs"
 end
 
+#Volume of a Solid Rod
+def VolRod
+  volume = ((3.14*($DIAMETER*$DIAMETER))/4)*$LENGTH*$WEIGHT
+  puts "Your calculated weight is #{volume}lbs"
+end
+
+#Is the method called when object is circular
+def round()
+  puts "Please enter the Diamter of the object or enter 0 if not required"
+  puts "Diameter:"
+  $DIAMETER = gets.chomp.to_f
+  puts "Please enter the Thickness of the object of a hollow pipe or 0 if not required"
+  puts "Thickness: "
+  $THICKNESS = gets.chomp.to_f
+end
+
 # the method in which the program should get all input for the lifting object
 def constants()
   puts "Please choose your material:\n1.Aluminum \n2.Brass n\3.Concrete \n4.Copper n\5.Diesel \n6.Oil,Motor \n7.Sand and Gravel \n8.Steel \n9.Water \n10.Wood"
@@ -67,13 +83,17 @@ def constants()
   puts "Height: "
   $HEIGHT = gets.chomp.to_f
   puts " "
-  puts "Please enter the Diamter of the object or enter 0 if not required"
-  puts "Diameter:"
-  $DIAMETER = gets.chomp.to_f
-  puts "Please enter the Thickness of the object of a hollow pipe or 0 if not required"
-  puts "Thickness: "
-  $THICKNESS = gets.chomp.to_f
+  puts "Is your object round? 1 for yes 0 for no"
+  answer = gets.chomp.to_i
+  if answer == 1
+    round()
+  else
+    puts "you Selected no"
+  end
+
 end
+
+
 
 # Welcome Page
 def Welcome()
