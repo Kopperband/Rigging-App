@@ -13,6 +13,19 @@ def LoadAngleMeasurement()
       puts "Warning your Load Angle Multiplier is #{loadAngleMeasurement.round(3)} which is less than 30 degrees"
     end
 end
+
+#Center Of Gravity
+#def CenterOfGravity()
+puts "Do You know where your center of gravity is? y/n"
+answer = gets.chomp.to_s
+if answer === "y"
+  puts ""
+#end
+
+#Weight on Each Strop
+#def WeightonStrops()
+#end
+
 #Volume of a Rectangle
 def VolRect()
     constants()
@@ -29,7 +42,7 @@ def VolPipe()
 end
 
 #Volume of a Solid Rod
-def VolRod
+def VolRod()
   volume = ((3.14*($DIAMETER*$DIAMETER))/4)*$LENGTH*$WEIGHT
   puts "Your calculated weight is #{volume}lbs"
 end
