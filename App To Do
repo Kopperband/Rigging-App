@@ -9,9 +9,9 @@ need to add the rest of the math calculations which include:
 - inches to feet:
   foot decimal = X / 12
 - complex shapes which should just be a multitude of different simple volume calculations
-- coeefiecnt of friction\
-- Center of gravity
-- Load on each sling
+- coeefiecnt of friction
+- Center of gravity: STARTED
+- Load on each sling: STARTED
 - list of sling WLL and sizes
 
 
@@ -29,3 +29,10 @@ Current math in program:
     Rectangle
   Calculations:
     Load Angle Multipliers
+
+Thoughts / Ideas
+-I need to come up with a better way to control the flow of the program and adjust the wording to make everything a bit more clear to the user.
+-as well as looking at maybe changing some strings to symbols after gain a better understanding of how they work in order to increase program speed.
+-I also want to look into if I can use ruby and SQL in conjunction for the list of equipment sizes and WLL but that will be a further down the road problem
+- I should check to see if i can use this with HTML/CSS/JS in order to make a GUI for easibility and portability as well as to make this a bigger project with
+more languages involved which may be a ruby on rails type thing more so on the server side.
